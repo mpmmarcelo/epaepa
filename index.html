@@ -6,73 +6,57 @@
   <link rel="icon" type="image/png" href="letter-e.png">
   <title>cachaças epaepa</title>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap');
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Moul&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
 
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #f0f0f0;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 60vh;
-      margin: 0;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    h1 {
-      font-family: 'Moul', sans-serif;
-      font-size: 4rem;
-      color: #9c1c13;
-      margin: 0.5rem 0;
-    }
-
-    h2 {
-      font-family: 'Belanosima', sans-serif;
-      font-size: 1.2rem;
-      max-width: 90%;
-      margin: 0.5rem 0;
-    }
-
-    a {
-      color: #9c1c13;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Responsivo para telas pequenas */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      h2 {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <!-- CSS Externo -->
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <img src="epaepa_logo.png" alt="logo epaepa" width="150" height="150">
-
 <h1>epa epa!</h1>
 
 <h2>
   site em construção..<br>
-  siga no insta: <a href="https://www.instagram.com/cachacasepaepa/" target="_blank">@cachacasepaepa</a><br><br>
-  pedidos pelo whats: <a
-  href="https://api.whatsapp.com/send/?phone=5544999493354&text=quero%20fazer%20um%20pedido&type=phone_number&app_absent=0"
-  target="_blank">(44) 99949-3354</a>
+  siga no insta:
+  <a href="https://www.instagram.com/cachacasepaepa/" target="_blank">@cachacasepaepa</a><br><br>
+  pedidos pelo whats:
+  <a href="https://api.whatsapp.com/send/?phone=5544999493354&text=Ola%20quero%20fazer%20um%20pedido&type=phone_number&app_absent=0" target="_blank">
+    (44) 99949-3354
+  </a>
 </h2>
 
+<div class="galeria" id="galeria">
+  <img src="imagens/foto1.png" alt="Foto 1">
+  <img src="imagens/foto2.png" alt="Foto 2">
+  <img src="imagens/foto3.png" alt="Foto 3">
+  <img src="imagens/foto4.png" alt="Foto 4">
+  <img src="imagens/foto5.png" alt="Foto 5">
+</div>
+
+<script>
+  const galeria = document.getElementById('galeria');
+  let scrollAmount = 0;
+  const scrollStep = 220;
+  const scrollDelay = 2000;
+
+  function autoScroll() {
+    if (scrollAmount >= galeria.scrollWidth - galeria.clientWidth) {
+      scrollAmount = 0;
+    } else {
+      scrollAmount += scrollStep;
+    }
+    galeria.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+
+  setInterval(autoScroll, scrollDelay);
+</script>
 
 </body>
 </html>
