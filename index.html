@@ -14,8 +14,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
+<!-- Body -->
 <body>
-
 <img src="epaepa_logo.png" alt="logo epaepa" width="150" height="150">
 <h1>epa epa!</h1>
 
@@ -24,39 +24,21 @@
   siga no insta:
   <a href="https://www.instagram.com/cachacasepaepa/" target="_blank">@cachacasepaepa</a><br><br>
   pedidos pelo whats:
-  <a href="https://api.whatsapp.com/send/?phone=5544999493354&text=Ola%20quero%20fazer%20um%20pedido&type=phone_number&app_absent=0" target="_blank">
+  <a
+    href="https://api.whatsapp.com/send/?phone=5544999493354&text=Ola%20quero%20fazer%20um%20pedido&type=phone_number&app_absent=0"
+    target="_blank">
     (44) 99949-3354
   </a>
 </h2>
 
-<div class="galeria" id="galeria">
+<div class="grid" id="grid">
   <img src="imagens/foto1.png" alt="Foto 1">
   <img src="imagens/foto2.png" alt="Foto 2">
   <img src="imagens/foto3.png" alt="Foto 3">
   <img src="imagens/foto4.png" alt="Foto 4">
   <img src="imagens/foto5.png" alt="Foto 5">
+  <img src="imagens/foto6.png" alt="Foto 6">
 </div>
-
-<script>
-  const galeria = document.getElementById('galeria');
-  let scrollAmount = 0;
-  const scrollStep = 220;
-  const scrollDelay = 2000;
-
-  function autoScroll() {
-    if (scrollAmount >= galeria.scrollWidth - galeria.clientWidth) {
-      scrollAmount = 0;
-    } else {
-      scrollAmount += scrollStep;
-    }
-    galeria.scrollTo({
-      left: scrollAmount,
-      behavior: 'smooth'
-    });
-  }
-
-  setInterval(autoScroll, scrollDelay);
-</script>
 
 </body>
 </html>
