@@ -28,6 +28,7 @@ h2 {
   font-size: 1.2rem;
   max-width: 90%;
   margin: 0.5rem 0;
+  text-align: left;
 }
 
 a {
@@ -39,14 +40,13 @@ a {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
+  gap: 25px;
+  padding: 10px;
 
 }
 
 .grid img {
-  opacity: 80%;
-  max-width: 200px;
+  max-width: 250px;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
@@ -54,7 +54,6 @@ a {
 }
 
 .grid img:hover {
-  opacity: 100%;
   transform: scale(1.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
@@ -71,15 +70,10 @@ a {
 
   .grid{
     grid-template-columns: repeat(2,1fr);
+    gap: 10px;
   }
 
   .grid img {
-    max-width: 100px;
-  }
-
-  .grid img:active {
-    opacity: 100%;
-    transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    max-width: 170px;
   }
 }
