@@ -28,7 +28,7 @@ h2 {
   font-size: 1.2rem;
   max-width: 90%;
   margin: 0.5rem 0;
-  text-align: left;
+  text-align: justify;
 }
 
 a {
@@ -58,6 +58,10 @@ a {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+.epaepa{
+  max-width: 10%;
+}
+
 /* Responsivo */
 @media (max-width: 600px) {
   h1 {
@@ -75,5 +79,13 @@ a {
 
   .grid img {
     max-width: 170px;
+  }
+
+  .logo {
+    max-width: 90%;
+  }
+
+  .epaepa{
+    max-width: 15%;
   }
 }
